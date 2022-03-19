@@ -102,7 +102,6 @@ def parse_form(filling_txt: str):
         # "Item 15": {"text": re.findall(compile(r"°Item 15.*?</TEXT>", RE_S_I), filling_txt)},
         # Item 15 is not necessary for now and it keeps conflicting with item 1
     }
-    save_to_json(section_dict, "section_dict.json")
 
     pattern_for_extract_table = compile(r"<table>.*?</table>", RE_S_I)
     for section_name, section_txt in tqdm(section_dict.items()):
